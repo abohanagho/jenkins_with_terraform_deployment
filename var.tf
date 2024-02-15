@@ -38,3 +38,9 @@ variable "security_group_ids" {
   
 }
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install 16
+npm install express
+docker build -t your_dockerhub_username/effulgencetech-nodejs-image:v1.0 .
+docker run --name effulgencetech-nodejs-image -p 80:8080 -d michaelgwei86/effulgencetech-nodejs-image:v1.0

@@ -80,7 +80,7 @@ Testing the webhook.....
 ### Performing continous integration with GitHub webhook
 
 1) #### Add jenkins webhook to github
-    - Access your repo **effulgencetech-app-infra-pipeline** on github
+    - Access your repo **jenkins_with_terraform_deployment** on github
     - Goto Settings --> Webhooks --> Click on Add webhook 
     - Payload URL: **htpp://REPLACE-JENKINS-SERVER-PUBLIC-IP:8080/github-webhook/**    (Note: The IP should be public as GitHub is outside of the AWS VPC where Jenkins server is hosted)
     - Click on Add webhook
@@ -95,8 +95,8 @@ Once both the above steps are done click on Save.
 
 ### Codebase setup
 
-1) #### For checking the checkov scan uncomment lines 74-78 in ec2/ec2.tf file
-    - Go back to your local, open your "effulgencetech-devops-fully-automated" project on VSCODE
+1) #### For checking the Gitbut webhook uncomment lines 42-51 in main.tf file
+    - Go back to your local, open your "jenkins_with_terraform_deployment" project on VSCODE
     - Open "main.tf file" uncomment lines   
     - Save the changes in both files
     - Finally push changes to repo
@@ -104,7 +104,6 @@ Once both the above steps are done click on Save.
         `git commit -m "relevant commit message"`
         `git push`
 
-2) #### Skipping all the checks on the Jenkins file comment the checkov scan lines accordingly with # (sure to shell)
 
 ## Finally observe the whole flow and understand the integrations
 # Happy learning from EffulgenceTech
