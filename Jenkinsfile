@@ -15,7 +15,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning project codebase...'
-                git branch: 'main', url: 'https://github.com/Michaelgwei86/effulgencetech-devops-fully-automated-infra.git'
+                git branch: 'main', url: 'https://github.com/Michaelgwei86/jenkins_with_terraform_deployment.git'
                 sh 'ls'
                 sh 'pwd'
             }
